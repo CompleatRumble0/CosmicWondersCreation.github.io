@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+	background:
+		url(space.jpg)
+		center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    color: white;
+}
+
+html {
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body header {
+   background: rgb(255, 255, 255);   
+}
+
+body header img {
+   display: block;
+   width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.Home {
+  width: 0em;
+  height: 30em;
+  background: url(cover2.jpeg);
+  box-shadow:
+    inset -1.5em -1.5em 1.5em #000,
+    -0.2em -0.2em 0.5em #ccc;
+  width: 10em;
+  height: 10em;
+  position: absolute;
+  right: -0em;
+  top: 83%;
+  transform: translateY(-50%);
+  animation: rotate 5s linear infinite;
+}
+
+.about-section {
+  text-align: center;
+  background: url(this.jpg);
+  box-shadow: inset -2em -2em 2em #000,
+  -0.5em -0.5em 1em #f0d08b;
+  position: relative;
+  margin: 8px;
+  animation: rotate 50s linear infinite;
+  width: 50em;
+  height: 50em;
+  }
+
+
+
+  .Home {
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+  }
+
+.container {
+    padding: 0 16px;
+  }
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.title {
+    color: white;
+  }
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.995);
+    background-color: #ffffff00;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+.button:hover {
+    background-color: #0008ff7f;
+  }
+
+  @keyframes rotate {
+    to{ background-position: -200% 0;}
+  }
+
+  @keyframes orbit {
+    49% { z-index: 1; }
+    50% { 
+      left: 25em;
+      z-index: -1;
+    }
+    99% { z-index: -1; }
+    100% {
+      left: -11em;
+      z-index: 1;
+    }
+  }	
+  
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
